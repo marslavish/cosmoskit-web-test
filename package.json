@@ -31,6 +31,7 @@
     "@cosmology/react": "^0.0.10",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
+    "@interchain-ui/react": "^1.1.11",
     "@keplr-wallet/cosmos": "^0.10.3",
     "@keplr-wallet/types": "0.10.3",
     "@keplr-wallet/unit": "0.10.3",
@@ -43,7 +44,7 @@
     "mobx": "6.6.1",
     "mobx-react-lite": "3.4.0",
     "mobx-utils": "^6.0.3",
-    "next": "12.1.0",
+    "next": "^12.3.4",
     "next-seo": "5.5.0",
     "prop-types": "^15.7.2",
     "react": "18.2.0",
@@ -64,8 +65,8 @@
     "@babel/plugin-transform-runtime": "7.17.0",
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
-    "@next/eslint-plugin-next": "12.1.0",
-    "@types/react": "17.0.39",
+    "@next/eslint-plugin-next": "^12.3.4",
+    "@types/react": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "5.42.1",
     "@typescript-eslint/parser": "5.42.1",
     "babel-core": "7.0.0-bridge.0",
@@ -73,7 +74,7 @@
     "babel-plugin-inline-json-import": "0.3.2",
     "babel-plugin-macros": "2.8.0",
     "eslint": "8.27.0",
-    "eslint-config-next": "12.1.0",
+    "eslint-config-next": "^13.4.10",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.2",
     "eslint-plugin-import": "2.26.0",
@@ -83,6 +84,6 @@
     "eslint-plugin-simple-import-sort": "8.0.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "prettier": "2.7.1",
-    "typescript": "^4.5.5"
+    "typescript": "^5.1.6"
   }
 }
