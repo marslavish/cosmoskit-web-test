@@ -16,7 +16,8 @@
     "invalidate": "AWS_PROFILE=webinc aws cloudfront create-invalidation --distribution-id E11QJSUOVT2WF0 --paths \"/*\"",
     "invalidate:stage": "AWS_PROFILE=webinc aws cloudfront create-invalidation --distribution-id EVVMCJ8N7Z0QP --paths \"/*\"",
     "deploy:all": "npm run export && npm run sync && S3_BUCKET=cosmoskit.com ./seo/prepare.sh",
-    "deploy:stage": "npm run export && npm run sync:stage && S3_BUCKET=stage.cosmoskit.com ./seo/prepare.sh"
+    "deploy:stage": "npm run export && npm run sync:stage && S3_BUCKET=stage.cosmoskit.com ./seo/prepare.sh",
+    "postinstall": "node ./scripts/copy-assets-to-public-dir.js"
   },
   "resolutions": {
     "react": "18.2.0",

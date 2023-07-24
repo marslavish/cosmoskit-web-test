@@ -1,15 +1,15 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import Frame, { FrameContextConsumer } from 'react-frame-component';
-import { Head } from '../components/seo/Head';
-import { Button, BondingCard, PoolCard } from '@interchain-ui/react';
-import { useTheme } from '../hooks/useTheme';
-import { ThemeProvider } from '@interchain-ui/react';
+import React from "react";
+import Layout from "../components/Layout";
+import Frame, { FrameContextConsumer } from "react-frame-component";
+import { Head } from "../components/seo/Head";
+import { Button, BondingCard, PoolCard } from "@interchain-ui/react";
+import { useTheme } from "../hooks/useTheme";
+import { ThemeProvider } from "@interchain-ui/react";
 
-import createCache from '@emotion/cache';
-import { CacheProvider, Global } from '@emotion/react';
-import weakMemoize from '@emotion/weak-memoize';
-import { useRouter } from 'next/router';
+import createCache from "@emotion/cache";
+import { CacheProvider, Global } from "@emotion/react";
+import weakMemoize from "@emotion/weak-memoize";
+import { useRouter } from "next/router";
 // import '@interchain-ui/react/styles';
 
 /**
@@ -32,10 +32,18 @@ export default function TestWithFrame() {
 
   const handleClick = () => {
     toggleTheme();
-    console.log({ myDocument: document.head.innerHTML });
   };
 
-  const initialContent = `<!DOCTYPE html><html><head>${document.head.innerHTML}</head><body><div></div></body></html>`;
+  const initialContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <link href="/vendor/interchain-ui-kit-react.cjs.css" rel="stylesheet" />
+      </head>
+      <body>
+        <div></div>
+      </body>
+    </html>`;
   // data-emotion="css 1q1sa4c"
 
   // const handleContentDidMount = () => {};
@@ -46,11 +54,11 @@ export default function TestWithFrame() {
         initialContent={initialContent}
         // contentDidMount={handleContentDidMount}
         style={{
-          border: '1px solid black',
-          width: '80%',
-          height: '600px',
-          margin: '60px auto',
-          padding: '10px',
+          border: "1px solid black",
+          width: "80%",
+          height: "600px",
+          margin: "60px auto",
+          padding: "10px",
         }}
         // hidden
       >
@@ -71,30 +79,29 @@ export default function TestWithFrame() {
               //     }}
               //   />
               // </CacheProvider>
-              <ThemeProvider defaultTheme='light'>
+              <ThemeProvider defaultTheme="light">
                 <div className={themeClass}>
                   <div>
-                    <Button variant='solid' onClick={handleClick}>
+                    <Button variant="solid" onClick={handleClick}>
                       Toggle Theme
                     </Button>
-                    <div style={{ height: '20px' }} />
-                    <BondingCard title='a day bonding' value='20.24%' />
-                    <div style={{ height: '20px' }} />
+                    <div style={{ height: "20px" }} />
+                    <BondingCard title="a day bonding" value="20.24%" />
+                    <div style={{ height: "20px" }} />
                     <PoolCard
                       apr={24}
                       bonded={600}
                       fees={59075}
-                      id='1'
+                      id="1"
                       poolLiquidity={168767639}
                       token1={{
-                        imgSrc:
-                          'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/bld.png',
-                        name: 'ATOM',
+                        imgSrc: "https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/bld.png",
+                        name: "ATOM",
                       }}
                       token2={{
                         imgSrc:
-                          'https://raw.githubusercontent.com/cosmos/chain-registry/master/assetmantle/images/mntl.png',
-                        name: 'OSOM',
+                          "https://raw.githubusercontent.com/cosmos/chain-registry/master/assetmantle/images/mntl.png",
+                        name: "OSOM",
                       }}
                       yourLiquidity={1329.32}
                     />
